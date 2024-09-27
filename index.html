@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rileys website builder !!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.10.17/interact.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 p-4">
+    <div id="canvas" class="w-full h-[600px] border-4 border-dashed border-gray-300 relative bg-white overflow-hidden"></div>
+    
+    <button id="addButton" class="fixed bottom-5 right-5 w-12 h-12 bg-blue-500 text-white rounded-full text-2xl shadow-lg hover:bg-blue-600 transition-colors">+</button>
+    
+    <div id="elementMenu" class="hidden fixed bottom-20 right-5 bg-white shadow-lg rounded-lg p-2">
+        <button data-type="banner" class="block w-full text-left px-4 py-2 hover:bg-gray-100 rounded">banner</button>
+        <button data-type="text" class="block w-full text-left px-4 py-2 hover:bg-gray-100 rounded">text</button>
+        <button data-type="image" class="block w-full text-left px-4 py-2 hover:bg-gray-100 rounded">image</button>
+        <button data-type="button" class="block w-full text-left px-4 py-2 hover:bg-gray-100 rounded">button</button>
+        <button data-type="marquee" class="block w-full text-left px-4 py-2 hover:bg-gray-100 rounded">marquee</button>
+    </div>
+    
+    <div id="properties" class="hidden fixed top-5 right-5 bg-white shadow-lg rounded-lg p-4 w-64">
+        <h3 class="text-lg font-bold mb-4">properties!!</h3>
+        <div id="commonProperties">
+            <label class="block mb-2">
+                <span class="text-gray-700">width (px):</span>
+                <input type="number" id="elementWidth" class="mt-1 w-full rounded-md border-gray-300 shadow-sm">
+            </label>
+            <label class="block mb-2">
+                <span class="text-gray-700">height (px):</span>
+                <input type="number" id="elementHeight" class="mt-1 w-full rounded-md border-gray-300 shadow-sm">
+            </label>
+        </div>
+        <div id="specificProperties"></div>
+        <button id="applyProperties" class="mt-4 w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors">apply</button>
+    </div>
+    
+    <button id="generateHTML" class="fixed bottom-5 left-5 bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 transition-colors">download</button>
+    
+    <script src="script.js"></script>
+</body>
+</html>
